@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATSAML22N18A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>SonicMeter</AssemblyName>
+    <Name>SonicMeter</Name>
+    <RootNamespace>SonicMeter</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>false</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.34.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.edbg</avrtool>
+    <avrtoolserialnumber>ATML2547040200004044</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x10820100</avrdeviceexpectedsignature>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <com_atmel_avrdbg_tool_edbg>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
+      <ToolNumber>ATML2547040200004044</ToolNumber>
+      <ToolName>EDBG</ToolName>
+    </com_atmel_avrdbg_tool_edbg>
+    <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>0</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800070757</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NULL=0</Value>
+      <Value>TRUE=1</Value>
+      <Value>FALSE=0</Value>
+      <Value>CPU_SPEED=32000000</Value>
+      <Value>MCU_SAML22</Value>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAML22_DFP\1.1.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\CMSIS\4.2.0\CMSIS\Include\</Value>
+      <Value>..</Value>
+      <Value>../../../NcssCoreDrivers/NcssCoreDrivers/Drivers/inc</Value>
+      <Value>../../../NcssCoreDrivers/NcssCoreDrivers(SAML22)/Mcu</Value>
+      <Value>../FlowSensors</Value>
+      <Value>../FlowSensors/AFE1000</Value>
+      <Value>../FlowSensors/TDC7200</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM>False</armgcc.linker.memorysettings.ExternalRAM>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsaml22n18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAML22_DFP\1.1.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\CMSIS\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.assembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAML22_DFP\1.1.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\CMSIS\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NULL=0</Value>
+      <Value>TRUE=1</Value>
+      <Value>FALSE=0</Value>
+      <Value>CPU_SPEED=32000000</Value>
+      <Value>MCU_SAML22</Value>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAML22_DFP\1.1.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\CMSIS\4.2.0\CMSIS\Include\</Value>
+      <Value>..</Value>
+      <Value>../../../NcssCoreDrivers/NcssCoreDrivers/Drivers/inc</Value>
+      <Value>../../../NcssCoreDrivers/NcssCoreDrivers(SAML22)/Mcu</Value>
+      <Value>../FlowSensors</Value>
+      <Value>../FlowSensors/AFE1000</Value>
+      <Value>../FlowSensors/TDC7200</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM>False</armgcc.linker.memorysettings.ExternalRAM>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsaml22n18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAML22_DFP\1.1.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\CMSIS\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.assembler.general.IncludePaths>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAML22_DFP\1.1.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\CMSIS\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers%28SAML22%29\Mcu\Mcu.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\Mcu.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers%28SAML22%29\Mcu\Mcu.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\Mcu.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\Computron.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\Computron.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\Debug.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\Debug.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\Input.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\Input.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\NcssMsg.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\NcssMsg.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\Sercom.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\Sercom.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\SoftFifo.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\SoftFifo.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\SoftTimer.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\SoftTimer.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\Spi.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\Spi.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\Uart.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\Uart.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\Utils.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\Utils.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\inc\WatchDogTimer.h">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\inc\WatchDogTimer.h</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\Computron.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\Computron.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\debug.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\debug.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\Input.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\Input.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\Sercom.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\Sercom.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\SoftFifo.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\SoftFifo.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\SoftTimer.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\SoftTimer.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\Spi.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\Spi.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\Uart.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\Uart.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\Utils.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\Utils.c</Link>
+    </Compile>
+    <Compile Include="..\..\NcssCoreDrivers\NcssCoreDrivers\Drivers\src\WatchDogTimer.c">
+      <SubType>compile</SubType>
+      <Link>NcssCoreDrivers\src\WatchDogTimer.c</Link>
+    </Compile>
+    <Compile Include="config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\startup_saml22.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\system_saml22.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FlowSensors\AFE1000\AFE.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FlowSensors\AFE1000\AFE.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FlowSensors\Flow.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FlowSensors\Flow.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FlowSensors\TDC7200\TDC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FlowSensors\TDC7200\TDC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Templates\Template.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Templates\Template.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Device_Startup\" />
+    <Folder Include="FlowSensors\AFE1000" />
+    <Folder Include="FlowSensors\TDC7200" />
+    <Folder Include="NcssCoreDrivers" />
+    <Folder Include="NcssCoreDrivers\inc" />
+    <Folder Include="NcssCoreDrivers\src" />
+    <Folder Include="FlowSensors" />
+    <Folder Include="Templates" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Device_Startup\saml22n18a_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\saml22n18a_sram.ld">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
